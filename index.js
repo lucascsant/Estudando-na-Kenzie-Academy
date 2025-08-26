@@ -172,9 +172,9 @@ let num3 = 3
 
 if (num1 > num2 && num2 > num3){
     console.log(num1 + " é maior que " + num2 + " que é maior que " + num3)
-} else if (num1 < num2 && num1 > num3){
+}else if (num1 < num2 && num1 > num3){
     console.log(num2 + " é maior que " + num1 + " que é maior que " + num3)
-} else if (num3 > num2 && num2 > num1){
+}else if (num3 > num2 && num2 > num1){
     console.log(num3 + " é maior que " + num2 + " que é maior que " + num1)
 }else if(num1 > num3 && num2 < num3){
     console.log(num1 + " é maior que " + num3 + " que é maior que " + num2)
@@ -195,7 +195,7 @@ if(numero1>numero2){
 } else{
     alert("Numeros iguais")
 }
-*/
+
 // Não altere o nome das variavéis ou o texto do prompt! 
 // Modifique apenas o tipo da variavel!            
 var gender = prompt('Genero');
@@ -248,3 +248,168 @@ if(result == true){
 }else{
     alert("Não passou")
 }
+
+
+function formataApresentacao() {
+    const nome = "Thiago";
+    const sobrenome = "Koman";
+    const modulo = "M1";
+
+    console.log('O nome completo do instrutor é:' + nome + sobrenome + ' e ele trabalha no módulo ' + modulo);
+}
+
+formataApresentacao()
+formataApresentacao()
+formataApresentacao()
+formataApresentacao()
+
+function somar(){
+    let num1 = 8
+    let num2 = 9
+
+    console.log(num1+num2);
+}
+
+somar();
+somar();
+
+
+function maiorDeIdade(){
+    var idade = 5
+
+    if (idade >= 18){
+        console.log("Já é maior de idade")
+    }
+    else {
+        console.log("Ainda é menor de idade")    
+    }
+}
+
+maiorDeIdade()
+maiorDeIdade()
+maiorDeIdade()
+
+
+function atividade(){
+    console.log("Hello World")
+}
+
+atividade()
+
+
+
+
+function monitor(){
+
+    let entregas = prompt("Quantas entregas foram?")
+    let entrevistas = prompt("Quantas entrevistas foram?")
+    let presenca = prompt("Quantas entrevistas foram?")
+
+    if (entregas >= 100 && entrevistas >=100 && presenca >= 100){
+        console.log("Possível monitor(a)")
+    }else{
+        console.log("Selecionar outro(a) aluno(a)")
+    }
+}
+
+monitor()
+
+function maiorNumero(){
+    let num1 = prompt("numero 1")
+    let num2 = prompt("numero 2")
+    let num3 = prompt("Numero 3")
+
+    if (num1 > num2 && num1 > num3){
+        console.log("Número 1 é maior")
+    } else if(num2 > num1 && num2 > num3){
+        console.log("Número 2 é maior")
+    } else if(num3 > num1 && num3 > num2){
+        console.log("Número 3 é maior")
+    }else{
+        console.log("Os números são iguais")
+    }
+}
+
+maiorNumero()
+
+
+
+function apresentacao(){
+    const nome = "Lucas"
+    const sobrenome = "Santos"
+    const idade = 28
+
+    console.log("Meu nome é " + nome + " " + sobrenome + " e tenho " + idade + " anos")
+}
+
+apresentacao()
+
+
+function soma(){
+    let num1 = 5
+    let num2 = 7
+    let result = 0
+
+    result = num1+num2
+    return result;
+}
+
+let resultadoSoma = soma();
+console.log(resultadoSoma);
+
+
+function soma(){
+    let num1 = 5
+    let num2 = 7
+    let result = 0
+
+    result = num1+num2
+    console.log(result)
+}
+
+let resultadoSoma = soma();
+console.log(resultadoSoma);
+
+function calcularAreaCirculo(raio){
+    const pi = 3.14
+    const areaCirculo = pi * raio * raio
+
+    return areaCirculo;
+}
+
+const resultado = calcularAreaCirculo(5);
+console.log(resultado)
+
+
+function calcularAreaTriangulo(base, altura){
+    console.log('Base é igual a: ' + base)
+    console.log('altura é igual a: ' + altura)
+
+    const areaTriangulo = (base*altura)/2
+
+    return areaTriangulo;
+}
+
+const resultado = calcularAreaTriangulo(5, 10)
+console.log(resultado)
+
+function valor(numero){
+    let p = "positivo"
+    let n = "parametro 0 ou negativo"
+    if (numero > 0){
+
+        return p;
+    }else{
+
+        return n;
+    }
+}
+
+let resultadoFuncao = valor(-5);
+console.log(resultadoFuncao)
+*/
+
+function contarDigitos(numero) {
+  return Math.abs(numero).toString().length;
+}
+console.log(contarDigitos(12345678))
