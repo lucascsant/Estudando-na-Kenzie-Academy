@@ -408,8 +408,275 @@ function valor(numero){
 let resultadoFuncao = valor(-5);
 console.log(resultadoFuncao)
 */
+/*
 
 function contarDigitos(numero) {
   return Math.abs(numero).toString().length;
 }
 console.log(contarDigitos(12345678))
+
+
+
+function numeroMaior(a, b){
+    if (a>b){
+        console.log(a+b)
+    }else{
+        console.log("O primeiro número não é maior que o segundo")
+    }
+}
+numeroMaior(4, 5)
+
+function primeiraLetra(palavra, letra){
+    let result = false
+    let letra1 = palavra.charAt(0);
+    if (letra1 == letra){
+        result = true;
+        console.log(result)
+    }else{
+        result = false;
+        console.log(result)
+    }
+}
+
+primeiraLetra("cebola", "c")
+
+
+function atendimento(horaAtendimento){
+    let horas = horaAtendimento
+    if (horas <= 11 && horas >= 23){
+        return "O /pergunta está em horário de funcionamento"
+    } else{
+        return "O /pergunta não está em horário de funcionamento"
+
+    }
+}
+
+function verificaNumero(num) {
+    let str = '';
+
+    if (num % 2 == 0) {
+        str = 'par';
+    } else {
+        str = 'impar';
+    }
+
+    str += ', ';
+
+    if (num > 0) {
+        str += 'positivo';
+    } else {
+        str += 'negativo';
+    }
+
+    str += ' e ';
+
+    if (num === parseInt(num)) {
+        str += 'não possui casas decimais';
+    } else {
+        str += 'possui casas decimais';
+    }
+
+    str = 'O numero ' + num + ' é ' + str;
+    //str = O numero -12 é par, negativo e não possui casas decimais
+    return str;
+}
+
+console.log(verificaNumero(-12));
+
+let valor = 18;
+let result = valor / 2;
+console.log(result);
+
+result = result / 3;
+console.log(result);
+
+let isPair = ( result == 3 );
+console.log(isPair);
+
+if (isPair) {
+    result = result * 6;
+} else {
+    result = result * 12;
+}
+
+console.log(result);
+
+function algarismosEmUmNumero(n){
+    let str = `${n}`;
+    let contagem = str.length;
+    console.log(contagem);
+
+    if (n != parseInt(n)) {
+        console.log("Entrou aqui");
+        contagem = contagem - 1;
+    }
+
+    console.log(contagem);
+
+    return contagem;
+}
+algarismosEmUmNumero(3.141517);
+
+function somaReutilizavel(a, b){
+    return a+b
+
+}
+
+let resultado = 0
+
+resultado = somaReutilizavel(10,10)*5
+
+console.log(resultado)
+
+function letraInicial(nome, sobrenome){
+    let primeiraLetraNome = nome[0].toUpperCase();
+    let primeiraLetraSobrenome = sobrenome[0].toUpperCase();
+
+    return primeiraLetraNome + " " + primeiraLetraSobrenome
+}
+
+function nomeCompleto(){
+    const iniciais = letraInicial('Lucas', 'Santos');
+
+    return "As letras iniciais do meu nome completo são " + iniciais
+}
+
+console.log(nomeCompleto());
+
+
+function par(n){
+    if (n % 2 === 0){
+        return true;
+    }
+
+    return false;
+}
+
+function impar(n){
+    if (n % 2 !== 0){
+        return true;
+    }
+
+    return false;
+}
+
+function letrasProduto(produto){
+    let result = '';
+    if (par(produto.length)) {
+        result = 'par';
+    } else if (impar(produto.length)) {
+        result = 'impar';
+    }
+}
+
+
+function calculaIMC(peso, altura) {
+    let alturaAoQuadrado = altura * altura;
+    let imc = peso / alturaAoQuadrado;
+    
+    return imc;
+}
+
+console.log(calculaIMC(80, 1.80))
+
+
+function calculaIdade(nome, anoFuturo, anoNascimento) {
+    let idade = anoFuturo - anoNascimento;
+    return `Em ${anoFuturo} ${nome} terá ${idade} anos de idade`;
+}
+console.log(calculaIdade("Lucas", 2230, 1997))
+
+
+
+function algarismosEmUmNumero(n) {
+    let str = `${n}`;
+    let contagem = str.length;
+
+    if (n != parseInt(n)) {
+        contagem = contagem - 1;
+    }
+
+    return contagem;
+}
+
+console.log(algarismosEmUmNumero(3.14159265))
+
+
+function diaDaSemana(n) {
+    let resultado = "";
+
+    if (n == 1) {
+        resultado = 'Domingo';
+    } else if(n == 2) {
+        resultado = 'Segunda-feira';
+    } else if(n == 3) {
+        resultado = 'Terça-feira';
+    } else if(n == 4) {
+        resultado = 'Quarta-feira';
+    } else if(n == 5) {
+        resultado = 'Quinta-feira';
+    } else if(n == 6) {
+        resultado = 'Sexta-feira';
+    } else if(n == 7) {
+        resultado = 'Sábado';
+    } else{
+        resultado = 'Valor Inválido';
+    }
+
+    return resultado;
+}
+
+console.log(diaDaSemana(0))
+
+function isPositive(number) {
+    if (number > 0) {
+        return "positivo";
+        console.log("esse console nunca sera mostrado")
+    } else if(number === 0){
+        return "zero"
+    }
+
+    return "negativo";
+    console.log("esse console nunca sera mostrado")
+}
+
+console.log(isPositive(0));
+
+const frase = "Estou estudando JavaScript";
+
+console.log(frase)
+
+const novaFrase = frase.replace("JavaScript", "Html")
+
+console.log(novaFrase)
+
+
+const frase = "Estou estudando JavaScript";
+
+console.log(frase)
+
+const comecaCom = frase.startsWith("est" , 6)
+
+console.log(comecaCom)
+
+
+const valor = 10.253274;
+
+console.log(valor)
+
+const valorFormatado = valor.toFixed(3);
+
+console.log(valorFormatado)
+
+console.log(Number.isInteger(valor))
+
+const valor = 10.253274;
+
+console.log(valor);
+
+const valorFormatado = valor.toFixed(3);
+
+const valorSomado = parseFloat(valorFormatado) + 2;
+
+console.log(valorSomado);
+*/
