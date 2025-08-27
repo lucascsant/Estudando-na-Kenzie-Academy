@@ -694,7 +694,7 @@ function mediaArredondada(media1, media2, media3){
 
 }
 console.log(mediaArredondada(3, 3, 4))
-*/
+
 
 function valorTotal(valorUnitario, quantidade){
 
@@ -711,3 +711,18 @@ function valorTotal(valorUnitario, quantidade){
 }
 
 console.log(valorTotal(10, 2))
+
+function interagirStrings(s1, s2) {
+  let resultado = "";
+
+  for (let i = 0; i < s1.length; i++) {
+    if (s1[i] === s2[i]) {
+      resultado += s1[i];  
+    } else {
+      resultado += "0";    
+    }
+  }
+
+  return resultado;
+}
+*/
