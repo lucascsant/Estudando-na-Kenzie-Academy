@@ -679,4 +679,35 @@ const valorFormatado = valor.toFixed(3);
 const valorSomado = parseFloat(valorFormatado) + 2;
 
 console.log(valorSomado);
+
+
+function substituiPalavra(frase, palavraAntiga, palavraNova){
+    const novaFrase = frase.replaceAll(palavraAntiga, palavraNova);
+    return novaFrase;
+}
+console.log(substituiPalavra("a minha casa é longe da casa do meu amigo", "casa", "residencia"));
+
+
+function mediaArredondada(media1, media2, media3){
+    let mediaGeral = (media1 + media2 + media3)/3
+    return `A média do aluno é ${mediaGeral.toFixed(1)}.`
+
+}
+console.log(mediaArredondada(3, 3, 4))
 */
+
+function valorTotal(valorUnitario, quantidade){
+
+    let valorCompra = 0;
+
+    if (quantidade >=10){
+        valorCompra = (valorUnitario * 0.8) * quantidade;
+    } else if (quantidade>=5){
+        valorCompra = (valorUnitario * 0.9) * quantidade;
+    } else{
+        valorCompra = valorUnitario * quantidade;
+    }
+    return valorCompra.toFixed(2);
+}
+
+console.log(valorTotal(10, 2))
